@@ -1,5 +1,5 @@
 //
-//  GFRepoInfoVC.swift
+//  GFRepoItemVC.swift
 //  GHFollowers
 //
 //  Created by Roland on 13/10/2020.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GFRepoInfoVC: GFItemInfoVC {
+class GFRepoItemVC: GFItemInfoVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureItems()
@@ -18,9 +18,5 @@ class GFRepoInfoVC: GFItemInfoVC {
         itemInfoViewOne.set(itemInfoType: .repos, withCount: user.publicRepos)
         itemInfoViewTwo.set(itemInfoType: .gists, withCount: user.publicGists)
         actionButton.set(backgroundColor: .systemPurple, title: "GitHub Profile")
-    }
-    
-    override func actionButtonTapped() {
-        delegate.didTapGitHubProfile(for: user)
     }
 }
